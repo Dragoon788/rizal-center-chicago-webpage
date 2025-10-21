@@ -4,7 +4,8 @@
 
 export default function DonateButton () {
     return (
-        <button className="bg-blue-500 p-5 w-[100]px h-[50]px text-md hover:bg-blue-700 rounded-xl">
+        // bg-sky-500 hover:bg-sky-700
+        <button className="w-35 h-1/2 text-md rounded-xl m-5 bg-white hover:bg-slate-300 text-[#F70B54] font-bold z-10">
             Donate
         </button>
     );

@@ -8,19 +8,19 @@ interface HeaderProps {
 
 export default function Header ( { NavMenuList } : HeaderProps){
     return (
-        <div className="flex w-full h-20 bg-red-500">
-            <div className="flex w-full h-6/4 justify-between m-5">
+        <div className="flex w-full h-20 items-center justify-between bg-[#F70B54]">
+            <NavMenu NavMenuList = {NavMenuList}/>
+            <div className="flex w-full h-7/4">
                 <Image
-                    className="items-center"
+                    className="mt-15 ml-5"
                     src="/RizalLogo2.svg"
                     alt="Rizal Center logo"
                     width={250}
                     height={200}
                     priority
                 />
-                <NavMenu NavMenuList = {NavMenuList}/>
-                <Donate />
             </div>
+            <Donate />
         </div>
 
     );

@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Donate from "./donateButton"
 
 interface NavMenuProps {
     NavMenuList: string[];
@@ -6,8 +7,8 @@ interface NavMenuProps {
 
 export default function NavMenu ( { NavMenuList } : NavMenuProps) {
     return(
-        <div className="w-full absolute">
-            <div className="flex justify-center gap-2 items-center">
+        <div className="w-full fixed">
+            <nav className="flex justify-center gap-2 items-center">
                 {NavMenuList.map((item) => 
                     <Link
                     key = {item}
@@ -17,7 +18,8 @@ export default function NavMenu ( { NavMenuList } : NavMenuProps) {
                     {item} 
                     </Link>
                 )}
-            </div>
+            </nav>
+            {/* <Donate/> */}
         </div>
     );
 }
