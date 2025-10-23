@@ -1,18 +1,10 @@
 'use client';
-import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from "next/image";
 
-
 // Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
-
 import { Autoplay, EffectFade } from 'swiper/modules';
-
-
 
 interface BannerCarouselProps{
     imageSources: string[];
