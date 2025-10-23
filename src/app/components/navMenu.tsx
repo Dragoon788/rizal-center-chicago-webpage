@@ -7,8 +7,8 @@ interface NavMenuProps {
 
 export default function NavMenu ( { NavMenuList } : NavMenuProps) {
     return(
-        <div className="w-full fixed">
-            <nav className="flex justify-center gap-2 items-center">
+        <div className="w-full fixed z-10">
+            <nav className="hidden sm:flex justify-center gap-2 items-center">
                 {NavMenuList.map((item) => 
                     <Link
                     key = {item}

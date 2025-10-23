@@ -1,4 +1,7 @@
 @import "tailwindcss";
+/* Needed global imports to fix the fade autoplay bug with swiperjs */
+@import 'swiper/css';
+@import 'swiper/css/effect-fade';
 
 :root {
   --background: #ffffff;
@@ -24,3 +27,5 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
