@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Header from "@/app/components/header"
-import BannerCarousel from "@/app/components/bannerCarousel";
-import EventsViewer from '@/app/components/eventsViewer';
+import Header from "@/app/components/HomePage/header"
+import BannerCarousel from "@/app/components/HomePage/bannerCarousel";
+import EventsViewer from '@/app/components/HomePage/eventsViewer';
 
 export default function Home() {
   return (
