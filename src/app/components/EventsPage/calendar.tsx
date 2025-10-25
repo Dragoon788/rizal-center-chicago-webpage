@@ -45,7 +45,7 @@ export default function Calendar() {
 //   )
 
   return (
-      <div className="max-w-md px-4 mx-auto sm:px-7 md:max-w-2xl md:px-6 bg-white">
+      <div className="w-sm px-4 mx-auto sm:px-7 md:w-xl md:px-6 bg-white">
           <div className="p-5 md:p-10">
             {/* The header portion of the calendar */}
             <div className="flex items-center">

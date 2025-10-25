@@ -12,7 +12,7 @@ export default function NavMenu ( { NavMenuList } : NavMenuProps) {
                 {NavMenuList.map((item) => 
                     <Link
                     key = {item}
-                    href={`/${item}`}
+                    href={`/${item.toLowerCase()}`}
                     className="inline-block m-3 hover:opacity-50"
                     >
                     {item} 
