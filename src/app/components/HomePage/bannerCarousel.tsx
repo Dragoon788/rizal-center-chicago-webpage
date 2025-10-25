@@ -26,7 +26,7 @@ export default function BannerCarousel ({ imageSources } : BannerCarouselProps){
                 {imageSources.map((source, i) => 
                     <SwiperSlide key={i}>
                         <div className="relative w-full h-[400px] flex items-center justify-center">
-                            <Image src={source} alt={source} fill={true} objectFit="cover" />
+                            <Image src={source} alt={source} fill={true} style={{ objectFit: 'cover' }} />
                         </div>
                     </SwiperSlide>
                 )}
