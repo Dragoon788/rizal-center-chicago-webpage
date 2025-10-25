@@ -47,7 +47,7 @@ export default function Calendar() {
 //   )
 
   return (
-      <div className="h-full aspect-square px-4 sm:px-7 md:px-6 bg-white">
+      <div className="m-5 h-full aspect-square px-4 sm:px-7 md:px-6 bg-white">
           <div className="p-5 md:p-10">
             {/* The header portion of the calendar */}
             <div className="flex items-center">
@@ -83,12 +83,12 @@ export default function Calendar() {
             {/* END */}
 
             {/* Loop through all the days of the month and assign this */}
-            <div className="grid grid-cols-7 mt-2 text-sm md:text-lg">
+            <div className="grid grid-cols-7 mt-2 text-sm md:text-xl">
               {days.map((day, dayIdx) => (
                 <div
                   key={day.toString()}
                   className={clsx(
-                    'py-1.5',
+                    'py-1.5 h-10 md:h-15',
                     {
                     [`col-start-${getDay(day)+1}`]: dayIdx === 0
                     }
@@ -98,7 +98,7 @@ export default function Calendar() {
                     type="button"
                     onClick={() => setSelectedDay(day)}
                     className={clsx(
-                    "mx-auto flex h-8 w-8 md:h-14 md:w-14 items-center justify-center rounded-full",
+                    "mx-auto flex h-full aspect-square items-center justify-center rounded-full",
                     {
                         "text-white": isEqual(day, selectedDay),
                         "text-red-500": isToday(day) && !isEqual(day, selectedDay),

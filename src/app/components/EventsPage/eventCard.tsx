@@ -12,8 +12,8 @@ interface EventCardProps {
 export default function EventCard ( {imgSrc, title, description, startDate, endDate } : EventCardProps) {
     
     return(
-        <div className="flex w-full h-1/4 m-5">
-            <figure className="relative h-full aspect-3/2 m-5">
+        <div className="flex md:h-2/7 bg-red-500 flex-shrink-0">
+            <figure className="relative h-full aspect-3/2">
                 <Image src={imgSrc} alt={imgSrc + ' image'} fill={true} style={{ objectFit: 'cover' }}/>
             </figure>
             <div className="flex flex-col m-5">
