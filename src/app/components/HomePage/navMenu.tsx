@@ -19,7 +19,7 @@ export default function NavMenu ( { NavMenuList } : NavMenuProps) {
                     {NavMenuList.map((item) => 
                         <Link
                         key = {item}
-                        href={`/${item}`}
+                        href={`/${item.toLowerCase()}`}
                         className="hover:opacity-50"
                         >
                         {item} 
@@ -40,19 +40,5 @@ export default function NavMenu ( { NavMenuList } : NavMenuProps) {
                 <HamburgerMenu NavMenuList={NavMenuList}/>
             </div>
         </>
-        <div className="w-full absolute z-10">
-            <nav className="hidden md:flex justify-center gap-2 items-center">
-                {NavMenuList.map((item) => 
-                    <Link
-                    key = {item}
-                    href={`/${item.toLowerCase()}`}
-                    className="inline-block m-3 hover:opacity-50"
-                    >
-                    {item} 
-                    </Link>
-                )}
-            </nav>
-            {/* <Donate/> */}
-        </div>
     );
 }
