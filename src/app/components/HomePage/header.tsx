@@ -9,6 +9,7 @@ interface HeaderProps {
 export default function Header ( { NavMenuList } : HeaderProps){
     return (
         <div className="flex w-full h-20 items-center justify-between bg-[#F70B54] text-sm lg:text-base">
+            <NavMenu NavMenuList = {NavMenuList}/>
             <div className="flex w-full h-7/4 z-2">
                 <Image
                     className="mt-15 ml-5"
