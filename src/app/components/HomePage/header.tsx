@@ -2,8 +2,10 @@ import Image from "next/image";
 import Donate from "./donateButton";
 import NavMenu from "./navMenu";
 
+import { NavSection } from '@/app/components/HomePage/navMenu'
+
 interface HeaderProps {
-    NavMenuList: string[];
+    NavMenuList: NavSection[];
 }
 
 export default function Header ( { NavMenuList } : HeaderProps){

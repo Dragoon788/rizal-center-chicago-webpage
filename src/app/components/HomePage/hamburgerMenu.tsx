@@ -5,8 +5,10 @@ import Donate from './donateButton'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 
+import { NavSection } from './navMenu';
+
 interface HamburgerMenuProps{
-    NavMenuList: string[];
+    NavMenuList: NavSection[];
 }
 
 export default function HamburgerMenu ( {NavMenuList} : HamburgerMenuProps){
@@ -27,11 +29,11 @@ export default function HamburgerMenu ( {NavMenuList} : HamburgerMenuProps){
                 <nav className={`flex flex-col ${!open && "hidden"}`}>
                     {NavMenuList.map((item) => 
                         <Link
-                        key = {item}
-                        href={`/${item}`}
+                        key = {item.primaryLink}
+                        href={`/${item.primaryLink}`}
                         className="hover:opacity-50 m-5 mr-10"
                         >
-                        {item} 
+                        {item.primaryLink} 
                         </Link>
                     )}
                     <Donate />

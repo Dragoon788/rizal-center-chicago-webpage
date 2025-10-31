@@ -2,12 +2,18 @@
 import Link from "next/link"
 import Donate from "./donateButton"
 import HamburgerMenu from "./hamburgerMenu"
+import NavItem from './navItem'
 
 import { Bars3Icon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 
+export interface NavSection {
+    primaryLink: string;
+    secondaryLinks: string[];
+}
+
 interface NavMenuProps {
-    NavMenuList: string[];
+    NavMenuList: NavSection[];
 }
 
 export default function NavMenu ( { NavMenuList } : NavMenuProps) {
@@ -17,13 +23,7 @@ export default function NavMenu ( { NavMenuList } : NavMenuProps) {
             <div className="w-full absolute z-10">
                 <nav className="hidden md:flex justify-center gap-5">
                     {NavMenuList.map((item) => 
-                        <Link
-                        key = {item}
-                        href={`/${item.toLowerCase()}`}
-                        className="hover:opacity-50"
-                        >
-                        {item} 
-                        </Link>
+                        <NavItem key={item.primaryLink} navCat={item}/>
                     )}
                     {/* <div className="w-10 h-10">
                         <Bars3Icon />
