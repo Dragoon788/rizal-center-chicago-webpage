@@ -7,7 +7,7 @@ import { NavSection } from '@/app/components/HomePage/navMenu'
 
 
 export default function Home() {
-  const navLinks: NavSection [] = [{primaryLink: "Home", secondaryLinks: []}, 
+  const navLinks: NavSection [] = [{primaryLink: "Home", secondaryLinks: ["Our Mission", "Answers", "YouTube", "Long, Long, Long, Long Answer"]}, 
                                   {primaryLink: "Events", secondaryLinks: []},
                                   {primaryLink: "Community", secondaryLinks: []},
                                   {primaryLink: "Contribute", secondaryLinks: []},
