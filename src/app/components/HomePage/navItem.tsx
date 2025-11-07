@@ -27,14 +27,14 @@ export default function NavItem ({ navCat } : NavItemProps) {
                 {navCat.primaryLink}
             </Link>
             <div className={`absolute pt-5 ${!active&&"hidden"}`}>
-                <ul className={"flex flex-col w-50 text-[#F70B54] rounded-xl bg-neutral-50 opacity-80"}>
+                <ul className={"flex flex-col w-50 text-[#F70B54] rounded-xl bg-neutral-50"}>
                     {/* Maybe instead of links to separate pages, I could have
                     Links to different parts of the same page */}
                     {navCat.secondaryLinks.map((subLink) => 
                         <Link 
                             key={subLink}
                             href={`/${subLink.toLowerCase()}`}
-                            className="hover:opacity-50 opacity-100 mb-2 mt-2 ml-3"
+                            className="hover:opacity-50 mb-2 mt-2 ml-3"
                         >
                             {subLink}
                         </Link>

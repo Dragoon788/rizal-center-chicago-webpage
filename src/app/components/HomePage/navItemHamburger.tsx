@@ -19,7 +19,7 @@ export default function NavItemHamburger ({ navCat } : NavItemHamburgerProps) {
     } 
 
     return(
-        <div className="text-[#F70B54] w-40 m-3 " onMouseDown={handleToggle}>
+        <div className="text-[#F70B54] w-40 m-3" onMouseDown={handleToggle}>
             <button className="flex flex-row justify-between w-full">
                 <Link href={`/${navCat.primaryLink.toLowerCase()}`} className="hover:opacity-50">
                     {navCat.primaryLink}
