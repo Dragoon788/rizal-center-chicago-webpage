@@ -1,33 +1,28 @@
 import Link from 'next/link'
-import { useState } from 'react'
 import { NavSection } from './navMenu'
+import { useState } from 'react'
 
-interface NavItemProps {
+interface NavItemHamburgerProps {
     navCat: NavSection;
 }
 
-export default function NavItem ({ navCat } : NavItemProps) {
-    const [active, setActive] = useState(false);
+export default function NavItemHamburger ({ navCat } : NavItemHamburgerProps) {
 
-    const handleHover = () => {
+    const [open, setOpen] = useState(false);
+
+    const handleToggle = () => {
         if (navCat.secondaryLinks.length != 0){
-            setActive(true);
+            setOpen(!open);
         }
     } 
 
-    const handleExitHover = () =>{
-        if (navCat.secondaryLinks.length != 0){
-            setActive(false);
-        }
-    }
-
     return(
-        <div className="relative" onMouseEnter={handleHover} onMouseLeave={handleExitHover}>
-            <Link href={`/${navCat.primaryLink.toLowerCase()}`} className="hover:opacity-50 m-3">
+        <div className="text-[#F70B54] m-3 mr-10" onMouseDown={handleToggle}>
+            <Link href={`/${navCat.primaryLink.toLowerCase()}`} className="hover:opacity-50">
                 {navCat.primaryLink}
             </Link>
-            <div className={`absolute pt-5 ${!active&&"hidden"}`}>
-                <ul className={"flex flex-col w-50 text-[#F70B54] rounded-xl bg-neutral-50 opacity-80"}>
+            <div className={`pt-5 ${!open&&"hidden"}`}>
+                <ul className={"flex flex-col"}>
                     {/* Maybe instead of links to separate pages, I could have
                     Links to different parts of the same page */}
                     {navCat.secondaryLinks.map((subLink) => 

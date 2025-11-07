@@ -1,9 +1,9 @@
 import Link from "next/link"
 import { useState } from 'react'
 import Donate from './donateButton'
+import NavItemHamburger from './navItemHamburger'
 
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid'
-import clsx from 'clsx'
 
 import { NavSection } from './navMenu';
 
@@ -25,16 +25,10 @@ export default function HamburgerMenu ( {NavMenuList} : HamburgerMenuProps){
                 <XMarkIcon className={`h-10 w-10 ${!open && "hidden"}`}/>
 
             </button>
-            <div className="absolute right-0 top-full mt-2 bg-red-500 z-5 rounded-lg transition-all ">
+            <div className="absolute right-0 top-full mt-2 bg-neutral-50 z-5 rounded-lg transition-all ">
                 <nav className={`flex flex-col ${!open && "hidden"}`}>
                     {NavMenuList.map((item) => 
-                        <Link
-                        key = {item.primaryLink}
-                        href={`/${item.primaryLink}`}
-                        className="hover:opacity-50 m-5 mr-10"
-                        >
-                        {item.primaryLink} 
-                        </Link>
+                        <NavItemHamburger navCat={item} key={item.primaryLink}/>
                     )}
                     <Donate />
                 </nav>

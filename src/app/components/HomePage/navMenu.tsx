@@ -25,15 +25,7 @@ export default function NavMenu ( { NavMenuList } : NavMenuProps) {
                     {NavMenuList.map((item) => 
                         <NavItem key={item.primaryLink} navCat={item}/>
                     )}
-                    {/* <div className="w-10 h-10">
-                        <Bars3Icon />
-                    </div> */}
                 </nav>
-                {/* <nav className="flex md:hidden justify-center gap-2">
-                    <div className="w-10 h-10">
-                        <Bars3Icon />
-                    </div>
-                </nav> */}
             </div>
             <Donate />
             <div className="relative flex md:hidden m-5">

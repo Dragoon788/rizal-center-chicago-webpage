@@ -14,7 +14,7 @@ export default function Home() {
                                   {primaryLink: "About", secondaryLinks: []}
                                 ]
   return (
-    <div className="h-screen bg-white">
+    <div className="h-screen bg-neutral-50">
       <Header NavMenuList = {navLinks}/>
       <BannerCarousel imageSources={["/RizalPhoto1.jpg", "/DSC06951.jpg", "/IMG_0125.jpeg", "/pgr12wmmnv161.jpg"]}/>
       <h2 className="m-10 text-3xl text-black font-bold">Upcoming Events</h2>
