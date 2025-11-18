@@ -13,7 +13,7 @@ interface EventsViewerProps {
 
 export default function EventsViewer ( {upcomingEvents} : EventsViewerProps){
     return(
-        <div className="w-full h-[300px]">
+        <div className="ml-auto mr-auto w-250 m-5 bg-green-500">
             <Swiper
                 // pagination={true}
                 navigation={true}
@@ -22,11 +22,14 @@ export default function EventsViewer ( {upcomingEvents} : EventsViewerProps){
                 grid={{
                     rows:1
                 }}
+                centeredSlides={true}
                 modules= {[Grid, Pagination, Navigation]}
             >
                 {upcomingEvents.map((eventInfo, i) => 
-                    <SwiperSlide key={i}>
-                        {eventInfo}
+                    <SwiperSlide key={i} className="">
+                        <div className="flex items-center justify-center w-70 h-40 bg-blue-500">
+                            {eventInfo}
+                        </div>
                     </SwiperSlide>
                 )}
             </Swiper>
