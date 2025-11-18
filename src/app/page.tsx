@@ -7,11 +7,15 @@ import { NavSection } from '@/app/components/HomePage/navMenu'
 
 
 export default function Home() {
-  const navLinks: NavSection [] = [{primaryLink: "Home", secondaryLinks: ["Our Mission", "Answers", "YouTube", "Long, Long, Long, Long Answer"]}, 
-                                  {primaryLink: "Events", secondaryLinks: []},
-                                  {primaryLink: "Community", secondaryLinks: []},
-                                  {primaryLink: "Contribute", secondaryLinks: []},
-                                  {primaryLink: "About", secondaryLinks: []}
+  const navLinks: NavSection [] = [{primaryLink: {label: "Home"}, 
+                                      secondaryLinks: [{label: "Our Mission", href: "mission"},
+                                                      {label: "Answers", href: "answers"}, 
+                                                      {label: "YouTube", href: "youtube"},
+                                                      {label: "Long, Long, Long, Long Answer", href:"longanswer"}]}, 
+                                  {primaryLink: {label: "Events"}, secondaryLinks: []},
+                                  {primaryLink: {label: "Community"}, secondaryLinks: []},
+                                  {primaryLink: {label: "Contribute"}, secondaryLinks: []},
+                                  {primaryLink: {label: "About"}, secondaryLinks: []}
                                 ]
   return (
     <div className="h-screen bg-neutral-50">

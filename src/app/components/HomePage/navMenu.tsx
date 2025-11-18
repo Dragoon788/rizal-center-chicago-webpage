@@ -1,15 +1,16 @@
 'use client';
-import Link from "next/link"
 import Donate from "./donateButton"
 import HamburgerMenu from "./hamburgerMenu"
 import NavItem from './navItem'
 
-import { Bars3Icon } from '@heroicons/react/24/solid'
-import clsx from 'clsx'
-
 export interface NavSection {
-    primaryLink: string;
-    secondaryLinks: string[];
+    primaryLink: NavLink;
+    secondaryLinks: NavLink[];
+}
+
+export interface NavLink {
+    label: string;
+    href?: string;
 }
 
 interface NavMenuProps {
@@ -17,13 +18,13 @@ interface NavMenuProps {
 }
 
 export default function NavMenu ( { NavMenuList } : NavMenuProps) {
-    
+    // Component to handle the look and design of the overall NavMenu
     return(
         <>
             <div className="w-full absolute z-10">
                 <nav className="hidden md:flex justify-center gap-5">
                     {NavMenuList.map((item) => 
-                        <NavItem key={item.primaryLink} navCat={item}/>
+                        <NavItem key={item.primaryLink.label} navCat={item}/>
                     )}
                 </nav>
             </div>
