@@ -6,13 +6,16 @@ import Image from "next/image";
 import 'swiper/css';
 import { Autoplay, EffectFade } from 'swiper/modules';
 
+import ImageTitle from './imageTitle';
+
 interface BannerCarouselProps{
     imageSources: string[];
 }
 
 export default function BannerCarousel ({ imageSources } : BannerCarouselProps){
     return (
-        <div className="w-full h-[400px]">
+        <>
+            <ImageTitle displayText={"Welcome to the Rizal Center"}/>
             <Swiper
                 effect={'fade'}
                 centeredSlides = {true}
@@ -25,12 +28,12 @@ export default function BannerCarousel ({ imageSources } : BannerCarouselProps){
             >
                 {imageSources.map((source, i) => 
                     <SwiperSlide key={i}>
-                        <div className="relative w-full h-[400px] flex items-center justify-center">
+                        <div className="relative w-full h-[200px] md:h-[350px] flex items-center justify-center">
                             <Image src={source} alt={source} fill={true} style={{ objectFit: 'cover' }} />
                         </div>
                     </SwiperSlide>
                 )}
             </Swiper>
-        </div>
+        </>
     );
 }
